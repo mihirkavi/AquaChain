@@ -32,13 +32,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
-          exclusion-patterns: |
-            .github
-            .git
-            *.md
-            *.docx
-            *.pptx
-            *.xlsx
       
       - name: Deploy to GitHub Pages
         id: deployment
