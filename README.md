@@ -1,33 +1,42 @@
 # AquaChain
 
-AquaChain uses blockchain for clean water.
+AquaChain is a water-quality monitoring prototype that explores how sensor dashboards and traceable records could make clean-water operations easier to understand.
 
-## Website
+## Current implementation
 
-This repository includes a modern, responsive website showcasing AquaChain's blockchain-based water management solution.
+- A React and Vite frontend with a landing page, sign-in, sensor dashboards, and reading charts.
+- An Express API with PostgreSQL storage and Socket.IO updates.
+- Simulated sensor readings and demonstration blockchain transaction records.
+- Venture planning, product-development, and commercialization documents.
 
-### Getting Started
+## Run locally
 
-To view the website, simply open `index.html` in your web browser. The website includes:
+Install Node.js and provision a local PostgreSQL database, then install both dependency sets from the repository root:
 
-- **Home**: Hero section with key information about AquaChain
-- **About**: Mission, vision, and core features
-- **Solution**: Comprehensive overview of AquaChain's offerings
-- **Technology**: Technical architecture and blockchain implementation
-- **Market**: Market opportunity and target segments
-- **Contact**: Contact form and information
+```bash
+npm install
+npm --prefix client install
+```
 
-### Features
+Create a local `.env` file with `DATABASE_URL` pointing to that database and a strong `JWT_SECRET`. Keep this file out of Git. The server initializes its tables and demonstration data on startup.
 
-- Fully responsive design (mobile, tablet, desktop)
-- Modern UI with smooth animations
-- Interactive navigation and scroll effects
-- Contact form integration ready
-- SEO-friendly structure
+```bash
+npm run dev
+```
 
-### Files
+Open `http://localhost:5000`. The API runs at `http://localhost:5001`.
 
-- `index.html` - Main HTML structure
-- `styles.css` - All styling and responsive design
-- `script.js` - Interactive functionality and animations
-- `AquaChain.png` - Company logo
+## Build
+
+```bash
+npm run build
+npm start
+```
+
+## Status and limitations
+
+This is a demonstration, not a deployed water-safety system. Sensor readings and blockchain transaction hashes are simulated; the current implementation does not prove physical sensor integration or submit those records to Ethereum. Use a local development database: startup seeds a demonstration account. The venture materials describe a broader product direction.
+
+## License
+
+No license file is included in this repository. This README grants no additional reuse or redistribution permissions; contact the repository owner about permitted use.
