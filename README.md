@@ -40,3 +40,11 @@ This is a demonstration, not a deployed water-safety system. Sensor readings and
 ## License
 
 No license file is included in this repository. This README grants no additional reuse or redistribution permissions; contact the repository owner about permitted use.
+
+<!-- project-artwork:start -->
+## Project artwork
+
+![Conceptual artwork for AquaChain](assets/brand/cover.png)
+
+Conceptual project artwork. [Asset files, design notes, and generation prompts](assets/brand/README.md).
+<!-- project-artwork:end -->
