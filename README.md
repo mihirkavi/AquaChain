@@ -4,10 +4,31 @@ AquaChain is a water-quality monitoring prototype that explores how sensor dashb
 
 ## Current implementation
 
-- A React and Vite frontend with a landing page, sign-in, sensor dashboards, and reading charts.
-- An Express API with PostgreSQL storage and Socket.IO updates.
-- Simulated sensor readings and demonstration blockchain transaction records.
-- Venture planning, product-development, and commercialization documents.
+- A React and Vite frontend with a landing page, registration and sign-in (household or business accounts), sensor dashboards, and reading charts.
+- An Express API with JWT authentication, PostgreSQL storage, and Socket.IO live updates.
+- Sensor management: add, edit, connect/disconnect, and toggle a simulated purifier per sensor.
+- A sensor simulator that generates pH, TDS, turbidity, and temperature readings every 10 seconds.
+- Demonstration blockchain transaction records (simulated hashes and block numbers) with a lookup endpoint.
+- Venture planning, product-development, and commercialization documents from the original team project.
+
+## Tech stack
+
+- **Frontend:** React 18, Vite, Chart.js, Socket.IO client, Lucide icons
+- **Backend:** Node.js, Express, Socket.IO, `pg`, `jsonwebtoken`, `bcryptjs`
+- **Database:** PostgreSQL
+
+## Project structure
+
+```text
+client/                  React + Vite frontend (pages, components, auth context)
+server/
+├── index.js             Express + Socket.IO entry point (serves client/dist in production)
+├── models/database.js   Table creation and demonstration seed data
+├── middleware/auth.js   JWT verification
+├── routes/              auth, sensors, readings, dashboard, blockchain APIs under /api
+└── utils/               Sensor reading simulator
+*.docx, *.pptx, *.xlsx   Venture, product-development, and commercialization materials
+```
 
 ## Run locally
 
@@ -18,7 +39,7 @@ npm install
 npm --prefix client install
 ```
 
-Create a local `.env` file with `DATABASE_URL` pointing to that database and a strong `JWT_SECRET`. Keep this file out of Git. The server initializes its tables and demonstration data on startup.
+Create a local `.env` file with `DATABASE_URL` pointing to that database and a strong `JWT_SECRET` (optionally `PORT` for the API, default 5001). Keep this file out of Git. The server initializes its tables and demonstration data on startup.
 
 ```bash
 npm run dev
