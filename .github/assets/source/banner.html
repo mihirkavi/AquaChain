@@ -1,0 +1,54 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- AquaChain README banner. Palette from client/src/index.css; Inter is the client's UI font. -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=block" rel="stylesheet">
+<style>
+:root{--bg:#f4f8fc;--ink:#0b2a44;--muted:#4b6378;--primary:#0066cc;--secondary:#00b8d4;--accent:#00d4aa;--card:#ffffff;--line:#d6e3ef;--wave1:rgba(0,102,204,.10);--wave2:rgba(0,184,212,.14);--grid:rgba(0,102,204,.06)}
+@media (prefers-color-scheme:dark){:root{--bg:#061a2c;--ink:#eaf4ff;--muted:#9db4c8;--primary:#3399ff;--secondary:#22c8e2;--accent:#1fe0b8;--card:#0c2740;--line:#1d3d5c;--wave1:rgba(51,153,255,.14);--wave2:rgba(34,200,226,.12);--grid:rgba(120,180,255,.05)}}
+*{margin:0;box-sizing:border-box}
+body{width:1600px;height:600px;overflow:hidden;background:var(--bg);font-family:Inter,sans-serif;color:var(--ink);position:relative;
+ background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:40px 40px}
+.waves{position:absolute;left:0;right:0;bottom:0;height:210px}
+.left{position:absolute;left:96px;top:78px;width:820px}
+.brand{display:flex;align-items:center;gap:14px;font:800 30px Manrope;letter-spacing:-.5px}
+.eyebrow{margin-top:34px;font:600 15px "JetBrains Mono";letter-spacing:2px;text-transform:uppercase;color:var(--primary)}
+h1{margin-top:14px;font:800 76px/1.02 Manrope;letter-spacing:-2.5px}
+h1 span{background:linear-gradient(135deg,var(--primary),var(--secondary));-webkit-background-clip:text;color:transparent}
+p{margin-top:22px;font:400 22px/1.45 Inter;color:var(--muted);width:700px}
+.chain{position:absolute;right:92px;top:110px;width:600px;height:340px}
+.block{position:absolute;width:176px;height:150px;background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:18px 18px;box-shadow:0 10px 30px rgba(0,60,120,.10)}
+.k{font:600 13px "JetBrains Mono";letter-spacing:1.5px;color:var(--muted);text-transform:uppercase}
+.v{margin-top:10px;font:800 34px Manrope;letter-spacing:-1px}
+.r{margin-top:10px;font:500 14px Inter;color:var(--muted)}
+.h{margin-top:12px;font:500 12.5px "JetBrains Mono";color:var(--primary)}
+.bar{height:6px;border-radius:3px;margin-top:10px;background:linear-gradient(90deg,var(--primary),var(--secondary),var(--accent))}
+</style></head><body>
+<svg class="waves" viewBox="0 0 1600 210" preserveAspectRatio="none">
+ <path d="M0 90 C 200 40 400 140 600 90 S 1000 40 1200 90 S 1500 130 1600 80 V210 H0Z" fill="var(--wave1)"/>
+ <path d="M0 140 C 250 100 450 180 700 135 S 1150 95 1350 140 S 1550 160 1600 130 V210 H0Z" fill="var(--wave2)"/>
+</svg>
+<div class="left">
+ <div class="brand">
+  <svg width="40" height="48" viewBox="0 0 40 48"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#19cbff"/><stop offset="1" stop-color="#0066cc"/></linearGradient></defs>
+   <path d="M20 2 C 28 14 38 24 38 32 A18 18 0 0 1 2 32 C 2 24 12 14 20 2Z" fill="url(#g)"/>
+   <g fill="none" stroke="#fff" stroke-width="3.2"><circle cx="12" cy="32" r="4.5"/><circle cx="20" cy="32" r="4.5"/><circle cx="28" cy="32" r="4.5"/></g></svg>
+  AquaChain
+ </div>
+ <div class="eyebrow">Prototype · simulated sensors</div>
+ <h1>Know your water,<br><span>reading by reading.</span></h1>
+ <p>A full-stack dashboard that turns pH, TDS, turbidity and temperature into one quality score, plain alerts and a record trail.</p>
+</div>
+<div class="chain">
+ <svg style="position:absolute;left:0;top:0" width="600" height="340">
+  <g fill="none" stroke="var(--primary)" stroke-width="3" opacity=".55">
+   <path d="M176 95 H212" stroke-dasharray="6 6"/><path d="M388 95 H424" stroke-dasharray="6 6"/>
+   <path d="M300 170 V200 M300 200 H120 V230"  stroke-dasharray="6 6" opacity=".0"/>
+  </g>
+  <g fill="var(--bg)" stroke="var(--primary)" stroke-width="3"><rect x="186" y="86" width="16" height="18" rx="8"/><rect x="398" y="86" width="16" height="18" rx="8"/></g>
+ </svg>
+ <div class="block" style="left:0;top:20px"><div class="k" style="text-transform:none">pH</div><div class="v">6.5–8.5</div><div class="r">safe range</div><div class="h">+ record hash</div></div>
+ <div class="block" style="left:212px;top:20px"><div class="k">TDS</div><div class="v">≤ 500</div><div class="r">ppm limit</div><div class="h">+ record hash</div></div>
+ <div class="block" style="left:424px;top:20px"><div class="k">Score</div><div class="v">≥ 50%</div><div class="r">else an alert</div><div class="h">+ record hash</div></div>
+ <div class="block" style="left:106px;top:196px;width:388px;height:104px"><div class="k">Live · every 10 s over WebSockets</div><div class="bar"></div><div class="r" style="margin-top:12px">Sensor → Express → PostgreSQL → React</div></div>
+</div>
+</body></html>

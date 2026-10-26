@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset=".github/assets/banner-dark.png">
-    <img alt="AquaChain: know your water, reading by reading. A water-quality dashboard prototype with live sensor cards, trends, alerts and a demo record trail." src=".github/assets/banner-light.png" width="100%">
+    <img alt="AquaChain: know your water, reading by reading. A full-stack water-quality dashboard prototype, shown as linked record cards for the alert thresholds (pH 6.5 to 8.5, TDS up to 500 ppm, quality score 50% or more) over a blue water grid." src=".github/assets/banner-light.png" width="100%">
   </picture>
 </p>
 
@@ -19,10 +19,10 @@
 </p>
 
 <p align="center">
-  <img alt="Status: prototype" src="https://img.shields.io/badge/status-prototype-6b6b6b?style=flat-square">
-  <img alt="Data: simulated" src="https://img.shields.io/badge/data-simulated-6b6b6b?style=flat-square">
-  <img alt="Stack: React, Express, PostgreSQL" src="https://img.shields.io/badge/React%20%C2%B7%20Express%20%C2%B7%20PostgreSQL-111111?style=flat-square">
-  <img alt="License: none" src="https://img.shields.io/badge/license-none-111111?style=flat-square">
+  <img alt="Status: prototype" src="https://img.shields.io/badge/status-prototype-0066cc?style=flat-square">
+  <img alt="Data: simulated" src="https://img.shields.io/badge/data-simulated-00b8d4?style=flat-square">
+  <img alt="Stack: React, Express, PostgreSQL" src="https://img.shields.io/badge/React%20%C2%B7%20Express%20%C2%B7%20PostgreSQL-023652?style=flat-square">
+  <img alt="License: none" src="https://img.shields.io/badge/license-none-023652?style=flat-square">
 </p>
 
 <p align="center">
